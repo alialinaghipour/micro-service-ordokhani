@@ -43,7 +43,7 @@ namespace CatalogApi.Repositories
             return await _context.Products.Find(filter).ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProducts()
+        public async Task<IList<Product>> GetProducts()
         {
             return await _context.Products
                                     .Find(_ => true)

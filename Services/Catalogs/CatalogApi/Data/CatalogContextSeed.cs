@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using CatalogApi.Entities;
 using MongoDB.Driver;
 
@@ -11,7 +9,7 @@ namespace CatalogApi.Data
     {
         public static void SeedData(IMongoCollection<Product> mongoCollection)
         {
-            bool existProduct = mongoCollection.Find(_ => true).Any();
+            var existProduct = mongoCollection.Find(_ => true).Any();
 
             if (!existProduct)
             {

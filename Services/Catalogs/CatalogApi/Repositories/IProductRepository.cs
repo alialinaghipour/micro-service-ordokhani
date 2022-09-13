@@ -6,7 +6,7 @@ namespace CatalogApi.Repositories
 {
     public interface IProductRepository
     {
-        Task<IEnumerable<Product>> GetProducts();
+        Task<IList<Product>> GetProducts();
         Task<IEnumerable<Product>> GetProductsByCategoryId(string Category);
         Task<Product> GetProductById(string id);
         Task<IEnumerable<Product>> GetProductByName(string name);
